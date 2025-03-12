@@ -1,0 +1,10 @@
+<div class="custom-select" [class.disabled]="disabled">
+  <button class="select-button" (click)="toggleDropdown()" [disabled]="disabled">
+    {{ selectedLabel || label }}
+  </button>
+  <ul class="select-dropdown" *ngIf="isOpen">
+    <li *ngFor="let option of options" (click)="selectOption(option)" [class.selected]="option.value === value">
+      {{ option.label }}
+    </li>
+  </ul>
+</div>
