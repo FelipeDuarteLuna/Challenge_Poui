@@ -3,10 +3,7 @@ import { SelectComponent } from './shared/select/select.component';
 import { SelectOption } from './models/selectOption';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwitchComponent } from './shared/switch/switch.component';
-import { PoModule, PoPageModule } from '@po-ui/ng-components';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PoTemplatesModule } from '@po-ui/ng-templates';
+
 
 @Component({
   selector: 'app-root',
