@@ -1,0 +1,24 @@
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* Espaçamento entre o switch e o botão */
+}
+
+button {
+  margin-top: 20px; /* Espaçamento superior para o botão */
+  margin-right: 30px;
+}
+
+.buttonError {
+  color: var(--color-error);
+}

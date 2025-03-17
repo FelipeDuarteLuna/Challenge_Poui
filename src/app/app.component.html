@@ -1,22 +1,47 @@
+<h1>Component Select</h1>
+
 <!-- Usando ngModel -->
+<h4>Usando ngModel</h4>
 <app-select
   [label]="title"
   [options]="countries"
   [(ngModel)]="selectedCountry"
-  [disabled]="isDisabled">
+  [disabled]="isDisabled"
+  [hasError]="hasError"
+>
 </app-select>
 
-
 <!-- Usando Reactive Forms -->
+<h4>Usando Reactive Forms</h4>
 <form [formGroup]="form">
   <app-select
-    [label]="'Selecione um país'"
+    [label]="'Choose an option Forms'"
     [options]="countries"
     formControlName="country"
-    [disabled]="isDisabled">
+  >
   </app-select>
 </form>
 
 <!-- Botão para desabilitar o campo de select -->
-<button (click)="isDisabled = !isDisabled">Toggle Disable</button>
+<button (click)="DisableSelect()">
+  {{ isDisabled ? 'Ativar Select' : 'Desativar Select' }}
+</button>
 
+<!-- Botão para alterar o estado de hasError -->
+<button class="buttonError" (click)="hasError = !hasError">
+  {{ hasError ? 'Remover Erro' : 'Adicionar Erro' }}
+</button>
+
+<h2>Component Switch</h2>
+
+<div class="switch-container">
+  <app-switch
+    [(checked)]="isActive"
+    (toggle)="onSwitchToggle($event)"
+    [disabled]="isDisabledSwitch"
+  ></app-switch>
+</div>
+
+<button (click)="isDisabledSwitch = !isDisabledSwitch">
+  {{ isDisabledSwitch ? 'Ativar Switch' : 'Desativar Switch' }}
+</button>
