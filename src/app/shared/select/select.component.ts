@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef, Input, HostListener, ElementRef, Renderer2 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { SelectOption } from '../../models/selectOption';
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,7 @@ export class SelectComponent implements ControlValueAccessor {
   @Input() label!: string;
   @Input() options: SelectOption[] = [];
   @Input() disabled: boolean = false;
+  @Input() hasError: boolean = false;
 
   isOpen: boolean = false;
   value!: string;
@@ -30,7 +31,8 @@ export class SelectComponent implements ControlValueAccessor {
 
   writeValue(value: string): void {
     this.value = value;
-    this.selectedLabel = this.options?.find(option => option.value === value)?.label ?? '';
+    this.selectedLabel =
+      this.options?.find((option) => option.value === value)?.label ?? '';
   }
 
   registerOnChange(fn: any): void {
