@@ -52,7 +52,7 @@ export class SwitchComponent implements ControlValueAccessor {
   }
 
   onKeyDown(event: KeyboardEvent) {
-    if (!this.disabled && (event.key === 'Enter' || event.key === ' ')) {
+    if (!this.disabled && (event.key === 'Enter')) {
       this.onToggle();
     }
   }
