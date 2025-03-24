@@ -1,6 +1,7 @@
 describe('Select Component', () => {
   it('Testing the Select component by selecting an option, applying error styling, and disabling the field.', () => {
     cy.visit('http://localhost:4200');
+    cy.wait(3000);
 
     // Garantir que o select está visível antes de interagir
     cy.get('[ng-reflect-label="Choose an option"] > .custom-select > .select-button')
