@@ -31,8 +31,17 @@ jobs:
       - name: Install Cypress
         run: npm install cypress
 
+      - name: Build Application
+        run: npm run build
+
+      - name: Start Angular Application
+        run: npm start &
+
+      - name: Wait for Application to be Ready
+        run: npx wait-on http://localhost:4200
+
       - name: Run E2E Tests with Cypress
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
           start: npm start
+          wait-on: http://localhost:4200
