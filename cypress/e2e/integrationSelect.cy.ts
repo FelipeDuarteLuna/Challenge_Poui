@@ -3,6 +3,9 @@ describe('Select Component', () => {
     cy.visit('http://localhost:4200');
     cy.wait(3000);
 
+      // Garantir que não há overlays antes do clique
+      cy.get('.window').should('not.exist');
+
     // Garantir que o select está visível antes de interagir
     cy.get('[ng-reflect-label="Choose an option"] > .custom-select > .select-button')
       .should('be.visible')
