@@ -1,0 +1,67 @@
+.custom-select {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-color-empty);
+  border-color: var(--color);
+  background-color: var(--background);
+  padding: var(--padding-vertical) var(--padding-horizontal);
+  min-height: 2.75em;
+  width: 100%;
+}
+
+.select-button {
+  color: var(--text-color);
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.select-dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  z-index: 10;
+}
+
+.select-dropdown li {
+  color: var(--color-li);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.select-dropdown li:hover {
+  background: #358ff0;
+}
+
+.disabled .select-button {
+  background-color: var(--background-disabled);
+  border-color: var(--color-disable);
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.focus.custom-select {
+  border-color: var(--color-focused);
+  outline-color: var(--outline-color-focused);
+}
+
+.select-button:hover {
+  border-color: var(--color-hover);
+  background-color: var(--background-hover);
+}
+
+.error .select-button {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}

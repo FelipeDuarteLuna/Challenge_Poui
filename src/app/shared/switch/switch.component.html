@@ -1,0 +1,17 @@
+<label
+  class="switch"
+  tabindex="0"
+  (keydown)="onKeyDown($event)"
+  role="switch"
+  [attr.aria-checked]="checked"
+  [attr.aria-disabled]="disabled"
+>
+  <input
+    type="checkbox"
+    [checked]="checked"
+    (change)="onToggle()"
+    [disabled]="disabled"
+    aria-hidden="true"
+  />
+  <span class="slider" p-icon="an an-user"></span>
+</label>

@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+:root {
+  --font-family: 'Arial, sans-serif';
+  --font-size: 16px;
+  --text-color-empty: #b0b0b0;
+  --color: #707070;
+  --color-li: #000;
+  --background: #f5f5f5;
+  --padding-horizontal: 0.5em; /* 8px */
+  --padding-vertical: 0.7em; /* 11px */
+  --text-color: #303030;
+  --color-focused: #303030;
+  --outline-color-focused: #303030;
+  --color-hover: #007bff;
+  --background-hover: #e0e0e0;
+  --color-disabled: #a0a0a0;
+  --background-disabled: #d0d0d0;
+  --color-error: #ff0000;
+
+  --border-width-md: 2px;
+  --border-width-lg: 2px;
+  --track-unchecked: #ccc;
+  --track-checked: #6b5cd4;
+  --track-checked-slider: #aba0f3;
+  --color-unchecked: white;
+  --color-checked: white;
+  --border-color: #aaa;
+  --outline-color-focused: #8a7bee;
+  --hover-color: #000;
+  --track-disabled: #e0e0e0;
+  --color-disabled: #f0f0f0;
+  --border-disabled: #ccc;
+  --color-checked-hover: #6b5cd4;
+  --color-unchecked-hover: #ccc;
+  --color-unchecked-disabled: #f0f0f0;
+  --color-checked-disabled: #ccc;
+}
