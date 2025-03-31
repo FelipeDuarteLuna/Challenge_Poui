@@ -1,10 +1,9 @@
 describe('Select Component', () => {
   it('Testing the Select component by selecting an option, applying error styling, and disabling the field.', () => {
     cy.visit('http://localhost:4200');
-    cy.wait(3000);
 
-      // Garantir que não há overlays antes do clique
-      cy.get('.window').should('not.exist');
+    // Garantir que o backdrop não está presente antes de interagir
+    cy.get('.backdrop').should('not.exist');
 
     // Garantir que o select está visível antes de interagir
     cy.get('[ng-reflect-label="Choose an option"] > .custom-select > .select-button')
@@ -14,7 +13,7 @@ describe('Select Component', () => {
     cy.get('.select-dropdown > :nth-child(3)').should('be.visible').click({ force: true });
 
     // Aplicar erro e garantir visibilidade antes de interagir
-    cy.get('.buttonError').should('be.visible').click();
+    cy.get('.buttonError').should('be.visible').click({ force: true });
     cy.get('.buttonError').click({ force: true });
 
     // Selecionar outra opção
